@@ -972,7 +972,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 		nSubsidy = 110000000 * COIN; 
 		return nSubsidy; 
 	} else {
-		nSubsidy = 10;
+		nSubsidy = 10 * COIN;
 	}
 		
     if (fDebug && GetBoolArg("-printcreation"))
