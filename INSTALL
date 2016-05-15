@@ -1,0 +1,9 @@
+Building ChiliCoin
+
+See doc/readme-qt.rst for instructions on building ChiliCoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of ChiliCoin.
+
+See doc/build-*.txt for instructions on building chilicoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of ChiliCoin.
