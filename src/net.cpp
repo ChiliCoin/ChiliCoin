@@ -1140,6 +1140,7 @@ void MapPort()
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
     	{"chilicoin.dnsalias.com", "chilicoin.dnsalias.com"},	
+		{"johnbrainless.ddns.net", "johnbrainless.ddns.net"},	
 };
 
 void ThreadDNSAddressSeed(void* parg)
