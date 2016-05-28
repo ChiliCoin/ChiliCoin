@@ -1,0 +1,6 @@
+usr/local/bin/chilicoin-qt usr/bin
+share/pixmaps/chilicoin32.xpm usr/share/pixmaps
+share/pixmaps/chilicoin16.xpm usr/share/pixmaps
+share/pixmaps/chilicoin128.png usr/share/pixmaps
+debian/chilicoin-qt.desktop usr/share/applications
+debian/chilicoin-qt.protocol usr/share/kde4/services/

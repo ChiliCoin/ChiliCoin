@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  chilicoind The chilicoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: chilicoind
+# processname: chilicoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/chilicoind, see below
+if [ -f /etc/sysconfig/chilicoind ]; then
+        . /etc/sysconfig/chilicoind
+fi
+
+RETVAL=0
+
+prog=chilicoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/chilicoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/chilicoind}
+
+# chilicoind defaults to /usr/bin/chilicoind, override with BITCOIND_BIN
+chilicoind=${BITCOIND_BIN-/usr/bin/chilicoind}
+
+# chilicoind opts default to -disablewallet, override with BITCOIND_OPTS
+chilicoind_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $chilicoind $chilicoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

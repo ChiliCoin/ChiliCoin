@@ -1,0 +1,11 @@
+[Protocol]
+exec=chilicoin-qt '%u'
+protocol=chilicoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

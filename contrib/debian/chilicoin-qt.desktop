@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ChiliCoin
+Comment=ChiliCoin P2P Cryptocurrency
+Comment[fr]=ChiliCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ChiliCoin, eşten eşe kriptografik sanal para birimi
+Exec=chilicoin-qt %u
+Terminal=false
+Type=Application
+Icon=chilicoin128
+MimeType=x-scheme-handler/chilicoin;
+Categories=Office;Finance;

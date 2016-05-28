@@ -1,0 +1,8 @@
+/usr/bin/chilicoin-cli		--	gen_context(system_u:object_r:chilicoin_exec_t,s0)
+/usr/sbin/chilicoind		--	gen_context(system_u:object_r:chilicoin_exec_t,s0)
+/usr/lib(64)?/chilicoin/chilicoind		--	gen_context(system_u:object_r:chilicoin_exec_t,s0)
+
+/etc/chilicoin(/.*)?		gen_context(system_u:object_r:chilicoin_conf_t,s0)
+/var/lib/chilicoin(/.*)?		gen_context(system_u:object_r:chilicoin_var_lib_t,s0)
+
+(/var)?/run/chilicoind(/.*)?   gen_context(system_u:object_r:chilicoin_var_run_t,s0)
